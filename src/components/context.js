@@ -9,3 +9,6 @@ const NotesContext = React.createContext ({
 })
 
 export default NotesContext;
+
+//**TODO: Figure out why if this file gets deleted the whole thing crashes */ 
+//**! git clone https://github.com/rivera1294/react-notes-app */

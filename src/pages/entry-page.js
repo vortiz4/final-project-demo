@@ -1,15 +1,11 @@
 import React, { useContext, useReducer } from "react";
 import NotesContext from "../components/context";
-import notesReducer from "../components/reducer";
 import Nav from "../components/Nav";
 import AddNote from "../components/AddNote";
 
-/** This import was for the NoteList from a tutorial I was learning from but never got to reference it in this project */
-// import NoteList from "../components/NoteList";
-
 function EntryPage() {
 	const initialState = useContext(NotesContext);
-	const [state, dispatch] = useReducer(notesReducer, initialState);
+	const [state, dispatch] = useReducer(initialState);
 	console.log(state);
 	return (
 		<NotesContext.Provider value={{ state, dispatch }}>
@@ -20,3 +16,6 @@ function EntryPage() {
 }
 
 export default EntryPage;
+
+//* I tweaked with some of the code here so that the note would appear */
+//**! git clone https://github.com/rivera1294/react-notes-app */

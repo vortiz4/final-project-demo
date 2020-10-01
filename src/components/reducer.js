@@ -54,3 +54,6 @@
 // }
 
 // export default reducer;
+
+//**TODO: Figure out why if I delete this file everything crashes? I deleted this out from the entry-page.js. Not using react-uuid at all. */
+//**! git clone https://github.com/rivera1294/react-notes-app */
