@@ -1,21 +1,11 @@
-import React, { useContext, useReducer } from "react";
-import NotesContext from "../components/context";
-import Nav from "../components/Nav";
+import React from "react";
+
 import AddNote from "../components/AddNote";
 
 function EntryPage() {
-	const initialState = useContext(NotesContext);
-	const [state, dispatch] = useReducer(initialState);
-	console.log(state);
-	return (
-		<NotesContext.Provider value={{ state, dispatch }}>
-			<Nav />
-			<AddNote />
-		</NotesContext.Provider>
-	);
+	return (<AddNote />);
 }
 
 export default EntryPage;
 
-//* I tweaked with some of the code here so that the note would appear */
-//**! git clone https://github.com/rivera1294/react-notes-app */
+//* I tweaked with some of the code here so that the added notes would appear */

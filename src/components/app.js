@@ -1,6 +1,8 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import EntryPage from "../pages/entry-page";
+import Header from "./Header";
+import Footer from "./Footer";
 import "./App.css";
 
 /**
@@ -10,11 +12,11 @@ import "./App.css";
 function App() {
 	return (
 		<BrowserRouter>
+			<Header />
 			<Switch>
-				<Route path="/entry">
-					<EntryPage />
-				</Route>
+				<EntryPage />
 			</Switch>
+			<Footer />
 		</BrowserRouter>
 	);
 }
