@@ -7,7 +7,7 @@ form {
 }
 
 .next_page {
-	display: flex;
+		display: block;
 	flex-wrap: wrap;
 	justify-content: center;
 }
@@ -29,7 +29,4 @@ input {
 	font-weight: 600;
 	margin: 10px 0 20px;
 	padding: 5px 10px;
-	border: none;
-    border-radius: 3px;
-    text-decoration: none;
 }
