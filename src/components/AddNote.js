@@ -65,7 +65,7 @@ class AddNote extends Component {
 					<ul>
 						{this.state.items.map((val) => (
 							<li>
-								{val.title} - {val.note}{" "}
+								{val.title}: {val.note}{" "}
 							</li>
 						))}
 					</ul>
@@ -75,7 +75,7 @@ class AddNote extends Component {
 				<form onSubmit={this.addNote}>
 					<input className="title"
 						type="text"
-						placeholder="Enter note title here"
+						placeholder="Enter title here"
 						ref={(title) => (this.theTitle = title)}
 					/>
 					<textarea placeholder="Enter your note here" ref={(note) => (this.theNote = note)} />

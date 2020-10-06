@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap");
+
+form {
+	font-family: "Roboto", sans-serif;
+	font-size: 30px;
+	text-align: center;
+}
+
+.next_page {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+input {
+	padding: 12px 15px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	font-size: 18px;
+    min-width: 400px;
+    margin: 10px;
+}
+
+.button {
+	color: white;
+	background: #007bff;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 10px 0 20px;
+	padding: 5px 10px;
+	border: none;
+    border-radius: 3px;
+    text-decoration: none;
+}

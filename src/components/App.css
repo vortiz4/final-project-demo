@@ -4,11 +4,11 @@
 	box-sizing: border-box;
 }
 
-.your_note {
+.entries {
 	font-family: "Roboto", sans-serif;
 	font-size: 22px;
 	display: block;
-	margin: 10px;
+	margin: 20px;
 }
 
 .note-form {
@@ -25,8 +25,8 @@
 .entries ul {
 	text-align: center;
 	list-style: none;
-  padding: 10px 10px;
-  margin: 20px 0 0 20px;
+	padding: 10px 10px;
+	margin: 20px 0 0 20px;
 }
 
 .add_note {
@@ -52,6 +52,15 @@ textarea {
 	padding: 10px 10px;
 	margin: 10px 0 20px;
 }
+
+.welcome {
+	font-family: "Roboto", sans-serif;
+	font-size: 22px;
+	display: block;
+    margin: 50px;
+    text-align: center;
+}
+
 
 /* .entries {
 	width: 20%;

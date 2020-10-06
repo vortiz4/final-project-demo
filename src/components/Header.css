@@ -6,9 +6,10 @@ nav {
     background: rgb(42, 158, 253);
 }
 
-.name {
+.header {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: 900;
     text-align: center;
     padding: 20px 10px;
 }
