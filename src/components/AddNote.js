@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 
 function AddNote() {
-	const fakeItems = [
-		{ title: "Title", note: "note" },
-		{ title: "Title 2", note: "note 2" },
-	];
+	const emptyArea = [];
 
-	const [items, setItems] = useState(fakeItems);
+	const [items, setItems] = useState(emptyArea);
 
 	const [title, setTitle] = useState("");
 
 	const [entry, setEntry] = useState("");
 
+	const [errorMsgTitle, setErrorMsgTitle] = useState();
+
+	const [errorMsgEntry, setErrorMsgEntry] = useState();
+
 	const onAddNote = (event) => {
 		event.preventDefault();
 		if (title === "") {
-			alert("Please Enter a Title");
+			setErrorMsgTitle("Please Enter a Title");
 			return;
 		}
 		if (entry === "") {
-			alert("Please Enter a Note");
+			setErrorMsgEntry("Please Enter a Note");
 			return;
 		}
 		setItems([...items, { title: title, note: entry }]);
@@ -29,10 +30,16 @@ function AddNote() {
 
 	const onTitleChange = (event) => {
 		setTitle(event.target.value);
+		if (title !== "") {
+			setErrorMsgTitle("");
+		}
 	};
 
 	const onEntryChange = (event) => {
 		setEntry(event.target.value);
+		if (title !== "") {
+			setErrorMsgEntry("");
+		}
 	};
 
 	return (
@@ -48,6 +55,7 @@ function AddNote() {
 			</div>
 			<div className="note_form">
 				<form onSubmit={onAddNote}>
+					<div className="error">{errorMsgTitle}</div>
 					<input
 						className="title"
 						type="text"
@@ -55,6 +63,7 @@ function AddNote() {
 						value={title}
 						onChange={onTitleChange}
 					/>
+					<div className="error">{errorMsgEntry}</div>
 					<textarea placeholder="Enter your note here" value={entry} onChange={onEntryChange} />
 					<button className="add_note" type="submit">
 						Add Note
