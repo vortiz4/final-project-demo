@@ -30,5 +30,3 @@ function App() {
 }
 
 export default App;
-
-//** Pretty proud how I set this up myself! */

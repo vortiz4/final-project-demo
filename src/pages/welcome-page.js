@@ -10,15 +10,15 @@ function WelcomeScreen(props) {
 
 	const onNameChange = (event) => {
 		setName(event.target.value);
-		if (name !== ""){
-			setErrorMessage("")
+		if (name !== "") {
+			setErrorMessage("");
 		}
 	};
 
 	const onNextClick = (event) => {
 		if (name === "") {
 			event.preventDefault();
-			setErrorMessage("Please enter a name")
+			setErrorMessage("Please enter a name");
 		}
 	};
 
@@ -26,7 +26,7 @@ function WelcomeScreen(props) {
 		<main>
 			<h1 className="welcome">Welcome to JotIt!</h1>
 			<form onSubmit={(e) => e.preventDefault()}>
-				<div>{errorMessage}</div>
+				<div className="error">{errorMessage}</div>
 				<label>
 					<input
 						type="text"
@@ -36,14 +36,13 @@ function WelcomeScreen(props) {
 					/>
 				</label>
 			</form>
-			<Link to="/entry" className="button" onClick={onNextClick}>
-				Next
+			<Link to="/entry" className="next_page" onClick={onNextClick}>
+				<div>
+					<p className="enter_button">Enter</p>
+				</div>
 			</Link>
 		</main>
 	);
 }
 
 export default WelcomeScreen;
-
-//**TODO: If I have time, include an alert() so the user has to put in a name in order to move onto the next page. */
-//** This is for the first screen where user's enter their name! */

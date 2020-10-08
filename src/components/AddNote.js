@@ -1,68 +1,68 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class AddNote extends Component {
-	constructor(props) {
-		super(props);
+function AddNote() {
+	const fakeItems = [
+		{ title: "Title", note: "note" },
+		{ title: "Title 2", note: "note 2" },
+	];
 
-		this.state = {
-			items: [],
-		};
+	const [items, setItems] = useState(fakeItems);
 
-		this.addNote = this.addNote.bind(this);
-	}
+	const [title, setTitle] = useState("");
 
-	addNote(event) {
-		console.log("Note Added");
+	const [entry, setEntry] = useState("");
 
-		if (this.theTitle.value !== "") {
-			var newItem = {
-				title: this.theTitle.value,
-				note: this.theNote.value,
-			};
-		}
-
-		this.setState((prevState) => {
-			return {
-				items: prevState.items.concat(newItem),
-			};
-		});
-
-		this.theNote.value = "";
-		this.theTitle.value = "";
-
-		console.log(this.state.items);
-
+	const onAddNote = (event) => {
 		event.preventDefault();
-	}
+		if (title === "") {
+			alert("Please Enter a Title");
+			return;
+		}
+		if (entry === "") {
+			alert("Please Enter a Note");
+			return;
+		}
+		setItems([...items, { title: title, note: entry }]);
+		setTitle("");
+		setEntry("");
+	};
 
-	render() {
-		return (
-			<div>
-		{/** This is where the Added notes appear */}
-				<div className="entries">
-					<ul>
-						{this.state.items.map((val, index) => (
-							<li key={index}>
-								{val.title}: {val.note}{" "}
-							</li>
-						))}
-					</ul>
-				</div>
-		{/** This is where you enter the note! Appear below the saved ones */}
-				<div className="note-form">
-				<form onSubmit={this.addNote}>
-					<input className="title"
+	const onTitleChange = (event) => {
+		setTitle(event.target.value);
+	};
+
+	const onEntryChange = (event) => {
+		setEntry(event.target.value);
+	};
+
+	return (
+		<div>
+			<div className="entries">
+				<ul>
+					{items.map((val, index) => (
+						<li key={index}>
+							{val.title}: {val.note}{" "}
+						</li>
+					))}
+				</ul>
+			</div>
+			<div className="note_form">
+				<form onSubmit={onAddNote}>
+					<input
+						className="title"
 						type="text"
 						placeholder="Enter title here"
-						ref={(title) => (this.theTitle = title)}
+						value={title}
+						onChange={onTitleChange}
 					/>
-					<textarea placeholder="Enter your note here" ref={(note) => (this.theNote = note)} />
-					<button className="add_note" type="submit">Add Note</button>
+					<textarea placeholder="Enter your note here" value={entry} onChange={onEntryChange} />
+					<button className="add_note" type="submit">
+						Add Note
+					</button>
 				</form>
-				</div>
 			</div>
-		);
-	}
+		</div>
+	);
 }
 
 export default AddNote;

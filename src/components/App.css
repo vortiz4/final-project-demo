@@ -11,15 +11,24 @@
 	margin: 20px;
 }
 
-.note-form {
+.add_note {
+	font-size: 18px;
+	color: white;
+	background: #007bff;
+	padding: 5px 10px;
+	border: none;
+}
+
+.note_form {
 	display: flex;
 	justify-content: center;
 	margin: 50px 0;
 }
 
-.note-form input {
-	padding: 10px 3px;
-	outline: none;
+input {
+	padding: 12px 15px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
 }
 
 .entries ul {
@@ -29,10 +38,9 @@
 	margin: 20px 0 0 20px;
 }
 
-
-.container {
+textarea {
 	height: 180px;
-	width: 500px;
+	width: 400px;
 }
 
 .title,
@@ -44,35 +52,27 @@ textarea {
 	font-size: 18px;
 	padding: 10px 10px;
 	margin: 10px 0 20px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	font-size: 18px;
 }
 
 .welcome {
 	font-family: "Roboto", sans-serif;
 	font-size: 22px;
 	display: block;
-    margin: 50px;
-    text-align: center;
+	margin: 50px;
+	text-align: center;
 }
 
-
-/* .entries {
-	width: 20%;
-	margin: 10px;
-	padding: 13px;
-  border-radius: 5px;
-	border: solid lightgray 1px;
-} */
-
-.btn-container {
-	display: flex;
-	justify-content: flex-end;
+.error {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: red;
 }
 
-.btn-container button {
-	margin-right: 10px;
-}
-
-/** Edit and Delete button stylizing */
+/** Edit and Delete button stylizing - I may need this */
 /* .edit {
     color: white;
     background: #007bff;
