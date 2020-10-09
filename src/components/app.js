@@ -17,11 +17,11 @@ function App() {
 		<BrowserRouter>
 			<Header />
 			<Switch>
-				<Route path="/welcome" exact>
+				<Route path="/" exact>
 					<WelcomePage name={name} setName={setName} />
 				</Route>
 				<Route path="/entry">
-					<EntryPage name={name}/>
+					<EntryPage name={name} />
 				</Route>
 			</Switch>
 			<Footer />
