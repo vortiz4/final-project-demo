@@ -1,4 +1,4 @@
-# :memo: JotIt App by Vicki Ortiz
+# :memo: JotIt App
 
 This application lets participants jot down quick and easy entries. You can make it as long or as
 short as you like.
