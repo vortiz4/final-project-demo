@@ -19,14 +19,15 @@ Initally there was suppose to be a splash page, however, for UX/UI purposes it m
 
 ### :tractor: What needs to be built:
 
-Some ideas for the future:
+**Some additions for the future:**
 
 - Date and time of note added.
 - a splash page that appears for a couple of seconds and disappears once the app is loaded.
   - Then loads the welcome page.
 - Add a setup account for new users.
 - Add a Login and Password fields for current users.
-- Have notes to be saved from previous session. 
+- Have notes to be saved from previous session.
+-  Add a Edit and Delete buttons for each entry.
 
 ## Other Notes:
 

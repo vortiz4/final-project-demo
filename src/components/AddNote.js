@@ -13,6 +13,8 @@ function AddNote() {
 
 	const [errorMsgEntry, setErrorMsgEntry] = useState();
 
+	const [buttonText, setButtonText] = useState("Add Note");
+
 	const onAddNote = (event) => {
 		event.preventDefault();
 		if (title === "") {
@@ -42,13 +44,16 @@ function AddNote() {
 		}
 	};
 
+	const changeText = (text) => setButtonText(text);
+
 	return (
-		<div>
+		<div className="container">
 			<div className="entries">
 				<ul>
 					{items.map((val, index) => (
-						<li key={index}>
-							{val.title}: {val.note}{" "}
+						<li key={index} className="list_item">
+							<div className="title_entry">{val.title}:</div>
+							<div className="note_entry">{val.note} </div>
 						</li>
 					))}
 				</ul>
@@ -65,8 +70,8 @@ function AddNote() {
 					/>
 					<div className="error">{errorMsgEntry}</div>
 					<textarea placeholder="Enter your note here" value={entry} onChange={onEntryChange} />
-					<button className="add_note" type="submit">
-						Add Note
+					<button className="add_note" type="submit" onClick={() => changeText("Add Another Note")}>
+						{buttonText}
 					</button>
 				</form>
 			</div>

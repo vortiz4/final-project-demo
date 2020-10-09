@@ -27,12 +27,23 @@ input {
 }
 
 .enter_button {
+	text-align: center;
 	color: white;
 	background: #007bff;
 	font-family: "Roboto", sans-serif;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: bold;
 	margin: 10px 0 20px;
 	padding: 10px 10px;
 	border: none;
+	width: 400px;
+	border-radius: 5px;
+}
+
+.enter_button:hover {
+	background-color: #025dbe;
+}
+
+.enter_button:focus {
+	background-color: #92bdeb;
 }
