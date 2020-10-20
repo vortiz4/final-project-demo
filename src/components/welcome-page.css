@@ -6,15 +6,15 @@ form {
 	text-align: center;
 }
 
-.next_page  {
+.next_page {
 	font-family: "Roboto", sans-serif;
 	font-size: 18px;
 	font-weight: 600;
 	text-decoration: none;
-	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 5px 10px;
+	color: white;
+	margin: 10px 10px;
 }
 
 input {
@@ -32,12 +32,10 @@ input {
 	background: #007bff;
 	font-family: "Roboto", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
-	margin: 10px 0 20px;
-	padding: 10px 10px;
 	border: none;
-	width: 400px;
 	border-radius: 5px;
+	text-decoration: none;
+	padding: 10px 180px;
 }
 
 .enter_button:hover {

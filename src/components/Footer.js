@@ -3,9 +3,11 @@ import "./Footer.css";
 
 function Footer() {
     return (
-        <div className="footer">
-            <p>© Vicki Ortiz 2020</p>
+        <nav>
+        <div>
+            <p className="footer">© Vicki Ortiz 2020</p>
         </div>
+        </nav>
     )
 }
 

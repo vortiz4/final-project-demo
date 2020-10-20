@@ -4,20 +4,42 @@
 	box-sizing: border-box;
 }
 
+/* Light Mode */
+body {
+	margin: 0;
+	text-align: center;
+}
+
+.light-theme {
+	background-color: #fff;
+	color: #444444;
+}
+
+.dark-theme {
+	background-color: #101018;
+	color: #f8f8f8;
+}
+
+.dark-theme nav {
+	background-color: #060814;
+}
+
+/* Note Entries Stylizing */
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	max-width: 500px;
 	margin: auto;
-	
 }
 
 .entries {
 	font-family: "Roboto", sans-serif;
 	font-size: 22px;
 	display: block;
-	width: 400px;
+	width: 500px;
+	white-space: normal;
+	line-height: 27px;
 }
 
 .title_entry {
@@ -104,16 +126,23 @@ textarea {
 }
 
 /** Edit and Delete button stylizing - I may need this in the future */
-/* .edit {
-    color: white;
-    background: #007bff;
-    padding: 5px 10px;
-    border: none;
-  }
-  
-  .delete {
-    color: white;
-    background: #dc3545;
-    padding: 5px 10px;
-    border: none;
-  } */
+.edit {
+	font-size: 18px;
+	color: white;
+	background: #007bff;
+	padding: 10px 10px;
+	margin: 10px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 900;
+}
+
+.delete {
+	font-size: 18px;
+	color: white;
+	background: #dc3545;
+	padding: 10px 10px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 900;
+}

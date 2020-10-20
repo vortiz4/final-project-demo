@@ -23,25 +23,27 @@ function WelcomeScreen(props) {
 	};
 
 	return (
-		<main>
-			<h1 className="welcome">Welcome to JotIt!</h1>
-			<form onSubmit={(e) => e.preventDefault()}>
-				<div className="error">{errorMessage}</div>
-				<label>
-					<input
-						type="text"
-						value={name}
-						onChange={onNameChange}
-						placeholder="Enter your name here"
-					/>
-				</label>
-			</form>
-			<Link to="/entry" className="next_page" onClick={onNextClick}>
-				<div>
-					<p className="enter_button">Enter</p>
+		<div className="Site">
+			<div className="Site-content">
+				<h1 className="welcome">Welcome to JotIt!</h1>
+				<form onSubmit={(e) => e.preventDefault()}>
+					<div className="error">{errorMessage}</div>
+					<label>
+						<input
+							type="text"
+							value={name}
+							onChange={onNameChange}
+							placeholder="Enter your name here"
+						/>
+					</label>
+				</form>
+				<div className="next_page">
+					<Link to="/entry" className="enter_button" onClick={onNextClick}>
+						Enter
+					</Link>
 				</div>
-			</Link>
-		</main>
+			</div>
+		</div>
 	);
 }
 
